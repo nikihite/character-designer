@@ -73,8 +73,8 @@ function displayStats() {
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
-    catchphrases.textContent = ' ';
     const catchPhraseList = document.getElementById('catchphrase-list');
+    catchPhraseList.textContent = ' ';
 
     // loop through each catchphrase in state
     // and for each catchphrase
