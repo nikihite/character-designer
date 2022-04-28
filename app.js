@@ -2,10 +2,12 @@
 const headDropdown = document.getElementById('head-dropdown');
 const middleDropdown = document.getElementById('middle-dropdown');
 const bottomDropdown = document.getElementById('bottom-dropdown');
+
 const headEl = document.getElementById('head');
 const middleEl = document.getElementById('middle');
 const bottomEl = document.getElementById('bottom');
 const reportEl = document.getElementById('report');
+
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
@@ -16,7 +18,7 @@ let middleCount = 0;
 let bottomCount = 0;
 
 // set state for all of the character's catchphrases
-let catchphrases = 0;
+let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
         // get the value of the head dropdown
@@ -55,24 +57,24 @@ bottomDropdown.addEventListener('change', () => {
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
-    
+    console.log(catchphraseInput.value);
     // push the new catchphrase to the catchphrase array in state
-
+    catchphrases.push(catchphraseInput.value);
     // clear out the form input's value so it's empty to the user
-
+    catchphraseInput.value = ' ';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
-
+    displayCatchphrases();
 });
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
+    reportEl.textContent = `You have changed the top ${headCount} times and the middle ${middleCount} times and the bottom ${bottomCount} times.`;
 }
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
-
+    catchphrases.textContent = ' ';
     // loop through each catchphrase in state
-
     // and for each catchphrase
     
     // create an HTML element with the catchphrase as its text content

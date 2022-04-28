@@ -1,1 +1,19 @@
 /* add home page styles here */
+
+#head {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/bird-head.png');
+}
+
+#middle {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/pink-middle.png');
+}
+
+#bottom {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/white-pants.png');
+}
