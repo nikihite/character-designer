@@ -35,7 +35,7 @@ middleDropdown.addEventListener('change', () => {
     // get the value of the middle dropdown
     console.log('changing middle to', middleDropdown.value);
     // increment the middle change count state
-    middleCount++
+    middleCount++;
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
     middleEl.style.backgroundImage = `url('./assets/${middleDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)
